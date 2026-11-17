@@ -4,7 +4,7 @@ public class longest{
 public static void main(String[] args){
 
 int max = Integer.MIN_VALUE;
-String first = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
+String first = "";
 
 
 
@@ -13,7 +13,7 @@ for (String arg : args) {
     if (value > max) {
         max = value;
     }
-    if (first.compareTo(arg)>0) {
+    if (first.compareTo(arg)<0) {
         first = arg;
     }
 
