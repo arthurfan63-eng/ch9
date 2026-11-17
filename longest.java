@@ -1,26 +1,23 @@
-public class longest{
+public class Longest {
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("No arguments provided.");
+            return;
+        }
 
+        String longest = args[0];
+        String first = args[0];
 
-public static void main(String[] args){
+        for (String arg : args) {
+            if (arg.length() > longest.length()) {
+                longest = arg;
+            }
+            if (arg.compareTo(first) < 0) {
+                first = arg;
+            }
+        }
 
-int max = Integer.MIN_VALUE;
-String first = "";
-
-
-
-for (String arg : args) {
-    int value = args.length;
-    if (value > max) {
-        max = value;
+        System.out.println("Longest: " + longest + " (" + longest.length() + " letters)");
+        System.out.println("First alphabetically: " + first);
     }
-    if (first.compareTo(arg)<0) {
-        first = arg;
-    }
-
-}
-int len = args[max-1].length();
-
-System.out.println("Longest: "+ args[max] +"(" + len +  " letters)");
-System.out.println("First alphabetically: " + first);
-}
 }
